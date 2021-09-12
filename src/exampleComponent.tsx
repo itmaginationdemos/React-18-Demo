@@ -8,7 +8,7 @@ export default function ExampleComponent() {
 
 
     async function handleClick() {
-        request<string>("https://geek-jokes.sameerkumar.website/api")
+        request<string>("https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&format=txt")
             .then((res) => {
                 // these two below will be "batched" (grouped) together
                 setCount(count => count + 1)
