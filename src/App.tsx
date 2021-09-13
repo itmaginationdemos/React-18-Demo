@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
 import ExampleComponent from './exampleComponent';
 
 function App() {
   return (
-    <div className="App">
-      <ExampleComponent />
-    </div>
+    // Even though this is not a SSR app, if it was, Suspense would have worked as well
+    <Suspense fallback={<p>Loading...</p>}>
+      <div className="App">
+        <ExampleComponent />
+      </div>
+    </Suspense>
+
   );
 }
 
