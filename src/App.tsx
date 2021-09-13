@@ -4,7 +4,7 @@ import ExampleComponent from './exampleComponent';
 
 function App() {
   return (
-    // Even though this is not a SSR app, if it was, Suspense would have worked as well
+    // Even though this is not an SSR app, if it was, Suspense would have worked as well
     <Suspense fallback={<p>Loading...</p>}>
       <div className="App">
         <ExampleComponent />
