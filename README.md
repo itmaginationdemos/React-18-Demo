@@ -10,7 +10,7 @@
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/itmaginationdemos/Trainings)
-[![Visit our website](https://img.shields.io/badge/Visit&nbsp;Our&nbsp;Website-black.svg)](https://www.itmagination.com)
+[![Visit our website](https://img.shields.io/badge/Visit&nbsp;Our&nbsp;Website-ITMAGINATION-black.svg)](https://www.itmagination.com)
 
 This project is a showcase of some of the new features of React 18.
 
