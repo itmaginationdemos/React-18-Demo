@@ -14,7 +14,7 @@
 
 This project is a showcase of some of the new features of React 18.
 
-## Available Scripts
+## Relevant Scripts
 
 To check out the demo in a development version, run
 
