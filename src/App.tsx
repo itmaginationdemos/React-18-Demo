@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import './App.css';
-import ExampleComponent from './exampleComponent';
+import ExampleComponent from './ExampleComponent';
 
 function App() {
   return (

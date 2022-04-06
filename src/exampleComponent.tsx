@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Joke from './Joke';
 import { request } from './typedFetch'
 
 export default function ExampleComponent() {
@@ -10,7 +11,7 @@ export default function ExampleComponent() {
     async function handleClick() {
         request<any>("https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single")
             .then((res) => {
-                
+
                 // these two below will be "batched" (grouped) together
                 setCount(count => count + 1)
                 setJoke(res.joke.toString())
@@ -27,9 +28,15 @@ export default function ExampleComponent() {
         <div style={{ display: "flex", flexDirection: "column" }}>
             {error ? <p>Warsaw, we have a problem. Refresh the page to try again.</p> : null}
             <h1>Click to get a random Dad joke, and to increase count</h1>
-            <p>Count: {count}</p>
-            {joke ? <p>{joke}</p> : <i>Warning the joke may be really bad...</i>}
-            <button onClick={handleClick} style={{ width: "3rem", alignSelf: "center", marginTop: "0.5rem" }}>Click</button>
+            <p data-testid="counter">Count: {count}</p>
+            {joke && <Joke joke={joke} />}
+            <button
+                data-testid="button"
+                onClick={handleClick}
+                style={{ width: "3rem", alignSelf: "center", marginTop: "0.5rem" }}
+            >
+                Click
+            </button>
         </div>
     )
 }
