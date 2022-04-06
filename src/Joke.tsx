@@ -7,7 +7,7 @@ interface Props {
 export default function Joke({ joke }: Props) {
     return (
         <Suspense fallback={<p>Loading...</p>}>
-        <div>{joke}</div>
+        <p data-testid="joke">{joke}</p>
         </Suspense>
     )
 }
